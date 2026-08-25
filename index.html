@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Ana Brasil Advocacia · Direito Previdenciário em Itapetininga</title>
+  <meta name="description" content="Atendimento humanizado em aposentadorias, auxílio-doença, auxílio-acidente e planejamento previdenciário em Itapetininga e região. Dra. Ana Júlia Brasil · OAB/SP.">
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Google Fonts: Lora + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-gold: #B89344;
+      --color-gold-hover: #CCA54E;
+      --color-gold-subtle: #F5EFE0;
+      --color-dark: #121815;
+      --color-dark-surface: #1B2320;
+      --color-dark-card: #222C27;
+      --color-white: #FFFFFF;
+      --color-sand: #FAF9F6;
+      --color-sand-card: #F4F2EB;
+      --color-text-dark: #1A211D;
+      --color-text-muted: #55635D;
+      --color-text-light: #F3F4F6;
+      --color-border-light: #E7E4DB;
+      --color-border-dark: rgba(184, 147, 68, 0.25);
+      --font-title: 'Lora', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--color-white);
+      color: var(--color-text-dark);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Top Utility Bar */
+    .top-bar {
+      background-color: var(--color-dark);
+      color: #9CA3AF;
+      font-size: 12px;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .top-bar a {
+      color: #E5E7EB;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .top-bar a:hover { color: var(--color-gold); }
+
+    /* Header */
+    header {
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-border-light);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .brand-logo img {
+      height: 42px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--color-text-dark);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--color-gold); }
+
+    .btn-header {
+      background-color: var(--color-dark);
+      color: var(--color-white);
+      padding: 9px 18px;
+      border-radius: 2px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .btn-header:hover {
+      background-color: var(--color-gold);
+      color: var(--color-dark);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-color: var(--color-sand);
+      border-bottom: 1px solid var(--color-border-light);
+      padding: 65px 0 75px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-watermark {
+      position: absolute;
+      right: -50px;
+      bottom: -50px;
+      width: 480px;
+      height: 480px;
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 1;
+      background-image: url('assets/SEM fundo 7.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--color-gold);
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: var(--font-title);
+      font-size: 38px;
+      line-height: 1.22;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--color-gold);
+      font-weight: 500;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--color-text-muted);
+      margin-bottom: 26px;
+      max-width: 500px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background-color: var(--color-dark);
+      color: var(--color-white);
+      border: 1px solid var(--color-dark);
+      padding: 12px 22px;
+      border-radius: 2px;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .btn-primary:hover {
+      background-color: var(--color-gold);
+      border-color: var(--color-gold);
+      color: var(--color-dark);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--color-dark);
+      border: 1px solid var(--color-border-light);
+      padding: 12px 20px;
+      border-radius: 2px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-secondary:hover {
+      background-color: var(--color-white);
+      border-color: var(--color-dark);
+    }
+
+    .hero-portrait-frame {
+      background: var(--color-white);
+      border: 1px solid var(--color-border-light);
+      padding: 10px;
+      border-radius: 2px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+    }
+
+    .hero-portrait-frame img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border: 1px solid var(--color-border-light);
+    }
+
+    .portrait-caption {
+      padding-top: 12px;
+      text-align: left;
+    }
+    .portrait-name {
+      font-family: var(--font-title);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--color-dark);
+    }
+    .portrait-title {
+      font-size: 11px;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* Highlights Linhas Sutis (Sem caixas pesadas) */
+    .highlights-row {
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-border-light);
+      padding: 26px 0;
+    }
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .highlight-item {
+      text-align: center;
+      padding: 0 16px;
+      border-right: 1px solid var(--color-border-light);
+    }
+    .highlight-item:last-child {
+      border-right: none;
+    }
+    .highlight-title {
+      font-family: var(--font-title);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 2px;
+      line-height: 1.2;
+    }
+    .highlight-sub {
+      font-size: 11.5px;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+
+    /* Section Global */
+    section {
+      padding: 70px 0;
+      position: relative;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 38px auto;
+    }
+    .section-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--color-gold);
+      margin-bottom: 6px;
+      display: block;
+    }
+    .section-heading {
+      font-family: var(--font-title);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-dark);
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .section-subtitle {
+      font-size: 14.5px;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+    }
+
+    /* Áreas de Atuação (Linguagem Simples e Direta) */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--color-sand);
+      border: 1px solid var(--color-border-light);
+      border-radius: 2px;
+      padding: 26px 20px;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-card:hover {
+      border-color: var(--color-gold);
+      background: var(--color-white);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+      transform: translateY(-2px);
+    }
+    .service-icon-box {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 14px;
+      color: var(--color-gold);
+    }
+    .service-icon-box svg {
+      width: 26px;
+      height: 26px;
+      stroke-width: 1.5;
+    }
+    .service-title {
+      font-family: var(--font-title);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .service-desc {
+      font-size: 13.5px;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .service-link {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--color-dark);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border-top: 1px solid var(--color-border-light);
+      padding-top: 12px;
+      transition: color 0.2s;
+    }
+    .service-link:hover { color: var(--color-gold); }
+
+    /* Sessão Editorial: Sobre a Dra. Ana Brasil */
+    .about-editorial-section {
+      background-color: var(--color-white);
+      border-top: 1px solid var(--color-border-light);
+      border-bottom: 1px solid var(--color-border-light);
+      position: relative;
+      overflow: hidden;
+    }
+    .about-watermark {
+      position: absolute;
+      left: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 440px;
+      height: 440px;
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 1;
+      background-image: url('assets/SEM fundo 7.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 44px;
+      align-items: center;
+    }
+    .about-portrait-placeholder {
+      background: var(--color-sand);
+      border: 1px solid var(--color-border-light);
+      padding: 10px;
+      border-radius: 2px;
+      position: relative;
+    }
+    .about-portrait-placeholder img {
+      width: 100%;
+      height: 410px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border: 1px solid var(--color-border-light);
+    }
+    .about-badge-tag {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: var(--color-dark);
+      color: var(--color-gold);
+      padding: 6px 14px;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 1px solid var(--color-border-dark);
+    }
+    .about-text h2 {
+      font-family: var(--font-title);
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--color-dark);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .about-text p {
+      font-size: 14.5px;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    /* Humanized Coimbra Narrative (Dark Section) */
+    .dark-section {
+      background-color: var(--color-dark);
+      color: var(--color-text-light);
+      border-top: 1px solid var(--color-border-dark);
+      border-bottom: 1px solid var(--color-border-dark);
+      padding: 70px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .dark-watermark {
+      position: absolute;
+      right: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 460px;
+      height: 460px;
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 1;
+      background-image: url('assets/SEM fundo 7.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .authority-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .authority-content .section-tag { color: var(--color-gold-hover); }
+    .authority-content h2 {
+      font-family: var(--font-title);
+      font-size: 30px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .authority-content p {
+      font-size: 14px;
+      color: #D1D5DB;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .human-quote {
+      border-left: 2px solid var(--color-gold);
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.03);
+      margin-top: 16px;
+      font-style: italic;
+      color: #F3F4F6;
+      font-size: 13.5px;
+      line-height: 1.65;
+    }
+    .action-card {
+      background: var(--color-dark-surface);
+      border: 1px solid var(--color-border-dark);
+      padding: 30px 24px;
+      border-radius: 2px;
+    }
+    .action-card h3 {
+      font-family: var(--font-title);
+      font-size: 22px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    .action-card p {
+      font-size: 13px;
+      color: #9CA3AF;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    /* Guidelines / Como Atendemos (Clareza sem Juriquês) */
+    .pillars-section {
+      background-color: var(--color-sand);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .pillar-item {
+      background: var(--color-white);
+      border: 1px solid var(--color-border-light);
+      padding: 24px 20px;
+      border-radius: 2px;
+    }
+    .pillar-num {
+      font-family: var(--font-title);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: 4px;
+    }
+    .pillar-title {
+      font-family: var(--font-title);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 6px;
+    }
+    .pillar-desc {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    /* Contact & Location */
+    .contact-section {
+      background-color: var(--color-white);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+    .contact-card {
+      border: 1px solid var(--color-border-light);
+      padding: 28px;
+      background: var(--color-sand);
+      border-radius: 2px;
+    }
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .contact-row svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--color-gold);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .contact-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-gold);
+      margin-bottom: 2px;
+    }
+    .contact-val, .contact-val a {
+      font-size: 13.5px;
+      color: var(--color-text-dark);
+      text-decoration: none;
+    }
+    .contact-val a:hover { color: var(--color-gold); }
+
+    .oab-disclaimer {
+      font-size: 11px;
+      color: #78857F;
+      line-height: 1.5;
+      padding-top: 14px;
+      border-top: 1px solid var(--color-border-light);
+      margin-top: 8px;
+    }
+    .map-frame {
+      border: 1px solid var(--color-border-light);
+      height: 100%;
+      min-height: 320px;
+      background: #EAE8E1;
+    }
+
+    /* FAQ ACCORDION (No Final do Site) */
+    .faq-section {
+      background-color: var(--color-sand);
+      border-bottom: 1px solid var(--color-border-light);
+      padding: 75px 0;
+    }
+    .faq-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: var(--color-white);
+      border: 1px solid var(--color-border-light);
+      border-radius: 2px;
+      margin-bottom: 10px;
+      transition: border-color 0.2s ease;
+      overflow: hidden;
+    }
+    .faq-item:hover {
+      border-color: var(--color-gold);
+    }
+    .faq-header {
+      padding: 18px 22px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      background: var(--color-white);
+    }
+    .faq-question {
+      font-family: var(--font-title);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-dark);
+      line-height: 1.35;
+      padding-right: 16px;
+    }
+    .faq-icon {
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--color-border-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-gold);
+      font-size: 15px;
+      font-weight: 400;
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+    }
+    .faq-item.active .faq-icon {
+      background-color: var(--color-dark);
+      color: var(--color-gold);
+      border-color: var(--color-dark);
+      transform: rotate(45deg);
+    }
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease;
+      background-color: #FCFBF9;
+      padding: 0 22px;
+    }
+    .faq-item.active .faq-body {
+      max-height: 300px;
+      padding: 14px 22px 20px 22px;
+      border-top: 1px solid var(--color-border-light);
+    }
+    .faq-body p {
+      font-size: 13.5px;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+    }
+
+    /* LGPD Banner */
+    .lgpd-banner {
+      position: fixed;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 28px);
+      max-width: 860px;
+      background-color: var(--color-dark);
+      border: 1px solid var(--color-border-dark);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+      border-radius: 2px;
+      padding: 14px 18px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .lgpd-banner.hidden { display: none; }
+    .lgpd-text {
+      font-size: 12px;
+      color: #D1D5DB;
+      line-height: 1.5;
+    }
+    .btn-lgpd-accept {
+      background-color: var(--color-gold);
+      color: var(--color-dark);
+      border: 1px solid var(--color-gold);
+      padding: 8px 16px;
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-radius: 2px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--color-dark);
+      color: #9CA3AF;
+      padding: 32px 0 20px 0;
+      font-size: 11.5px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .footer-logo img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+    .footer-bottom {
+      padding-top: 14px;
+      text-align: center;
+      font-size: 10.5px;
+      color: #6B7280;
+    }
+
+    /* Mobile Responsiveness (Perfeita em Smartphones) */
+    @media (max-width: 900px) {
+      .hero-grid, .about-grid, .authority-grid, .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-portrait-frame img, .about-portrait-placeholder img { height: 340px; }
+      .services-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .pillars-grid { grid-template-columns: 1fr; gap: 12px; }
+      .highlights-grid { grid-template-columns: 1fr 1fr; gap: 16px 0; }
+      .highlight-item:nth-child(2) { border-right: none; }
+      .hero-title { font-size: 30px; }
+      .section-heading { font-size: 26px; }
+      .faq-question { font-size: 16.5px; }
+      .nav-links { display: none; }
+      .lgpd-banner { flex-direction: column; align-items: flex-start; }
+      .btn-lgpd-accept { width: 100%; }
+    }
+
+    @media (max-width: 580px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .highlights-grid { grid-template-columns: 1fr; gap: 14px 0; }
+      .highlight-item { border-right: none; border-bottom: 1px solid var(--color-border-light); padding-bottom: 12px; }
+      .highlight-item:last-child { border-bottom: none; padding-bottom: 0; }
+      .hero-actions { flex-direction: column; width: 100%; }
+      .btn-primary, .btn-secondary { width: 100%; text-align: center; }
+      .hero-title { font-size: 27px; }
+      .hero-portrait-frame img, .about-portrait-placeholder img { height: 290px; }
+      .top-bar-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div>Advocacia Previdenciária & Atendimento Humanizado · Itapetininga/SP</div>
+      <div>
+        <a href="https://wa.me/5515998397506" target="_blank">Atendimento: (15) 99839-7506</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#inicio" class="brand-logo">
+        <img src="assets/SEM fundo 5.png" alt="Ana Brasil Advocacia">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#atuacao">Áreas de Atuação</a></li>
+        <li><a href="#sobre-ana">Sobre a Dra. Ana</a></li>
+        <li><a href="#diretrizes">Como Atendemos</a></li>
+        <li><a href="#contato">Localização</a></li>
+        <li><a href="#faq">Dúvidas Frequentes</a></li>
+      </ul>
+
+      <a href="https://wa.me/5515998397506?text=Ol%C3%A1%2C%20Dra.%20Ana%20Brasil.%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20benef%C3%ADcios%20previdenci%C3%A1rios." target="_blank" class="btn-header">
+        Orientação Jurídica
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="inicio">
+    <div class="hero-watermark"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-badge">Direito Previdenciário Humanizado</span>
+        <h1 class="hero-title">
+          Orientação jurídica próxima, simples e com respeito à <em>sua história</em>.
+        </h1>
+        <p class="hero-desc">
+          Atendimento dedicado a trabalhadores, aposentados e famílias em Itapetininga e região. Conversa clara e acolhedora sobre aposentadorias, auxílio-doença e planejamento de benefícios.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/5515998397506?text=Ol%C3%A1%2C%20Dra.%20Ana.%20Gostaria%20de%20esclarecer%20d%C3%BAvidas%20sobre%20meu%20benef%C3%ADcio%20do%20INSS." target="_blank" class="btn-primary">
+            Tirar Dúvidas com a Advogada
+          </a>
+          <a href="#atuacao" class="btn-secondary">
+            Ver Áreas de Atuação
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-portrait">
+        <div class="hero-portrait-frame">
+          <img src="assets/ana_brasil.png" alt="Dra. Ana Júlia Brasil - Advogada">
+          <div class="portrait-caption">
+            <div class="portrait-name">Dra. Ana Júlia Brasil</div>
+            <div class="portrait-title">Advogada · OAB/SP · Pós-Graduada em Coimbra</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS LINHAS SUTIS (SEM CAIXAS PESADAS) -->
+  <div class="highlights-row">
+    <div class="container highlights-grid">
+      <div class="highlight-item">
+        <div class="highlight-title">Itapetininga / SP</div>
+        <div class="highlight-sub">Atendimento no escritório e online</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-title">Escuta com Atenção</div>
+        <div class="highlight-sub">Atendimento humano e acolhedor</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-title">Universidade de Coimbra</div>
+        <div class="highlight-sub">Formação em Direitos Humanos</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-title">Ética e Respeito</div>
+        <div class="highlight-sub">Conformidade com a OAB</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ÁREAS DE ATUAÇÃO (LINGUAGEM SIMPLES E DIRETA) -->
+  <section id="atuacao">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Orientações & Direitos</span>
+        <h2 class="section-heading">Como Podemos Ajudar Você</h2>
+        <p class="section-subtitle">
+          Informações fáceis de entender para esclarecer seus direitos e encontrar o melhor caminho para cada caso.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1. Aposentadorias -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="service-title">Aposentadorias do INSS</h3>
+            <p class="service-desc">
+              Contagem correta do seu tempo de serviço, trabalho no campo na roça, idade mínima e atividades com insalubridade.
+            </p>
+          </div>
+          <a href="https://wa.me/5515998397506?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Aposentadoria." target="_blank" class="service-link">
+            Saber mais sobre aposentadorias &rarr;
+          </a>
+        </div>
+
+        <!-- 2. Benefícios por Incapacidade -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="service-title">Auxílio-Doença & Acidentes</h3>
+            <p class="service-desc">
+              Orientação para quem precisou se afastar por problema de saúde ou acidente e teve o benefício negado na perícia do INSS.
+            </p>
+          </div>
+          <a href="https://wa.me/5515998397506?text=Ol%C3%A1%2C%20gostaria%20de%20orienta%C3%A7%C3%A3o%20sobre%20Aux%C3%ADlio-Doen%C3%A7a." target="_blank" class="service-link">
+            Saber mais sobre auxílio-doença &rarr;
+          </a>
+        </div>
+
+        <!-- 3. Planejamento Previdenciário -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h3 class="service-title">Planejamento da Aposentadoria</h3>
+            <p class="service-desc">
+              Cálculo detalhado para descobrir o momento certo de pedir o benefício e não perder dinheiro com pedidos adiantados.
+            </p>
+          </div>
+          <a href="https://wa.me/5515998397506?text=Ol%C3%A1%2C%20gostaria%20de%20orienta%C3%A7%C3%A3o%20sobre%20Planejamento%20Previdenci%C3%A1rio." target="_blank" class="service-link">
+            Saber mais sobre planejamento &rarr;
+          </a>
+        </div>
+
+        <!-- 4. BPC / LOAS -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="service-title">Benefício Assistencial (BPC)</h3>
+            <p class="service-desc">
+              Informações sobre o benefício de 1 salário mínimo para idosos acima de 65 anos ou pessoas com deficiência em situação difícil.
+            </p>
+          </div>
+          <a href="https://wa.me/5515998397506?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20BPC%20LOAS." target="_blank" class="service-link">
+            Saber mais sobre BPC &rarr;
+          </a>
+        </div>
+
+        <!-- 5. Trabalho & Saúde -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <h3 class="service-title">Direitos do Trabalhador</h3>
+            <p class="service-desc">
+              Proteção contra abusos, acidentes de trabalho, acertos rescisórios e respeito à saúde do trabalhador no dia a dia.
+            </p>
+          </div>
+          <a href="https://wa.me/5515998397506?text=Ol%C3%A1%2C%20gostaria%20de%20orienta%C3%A7%C3%A3o%20em%20Direito%20do%20Trabalho." target="_blank" class="service-link">
+            Saber mais sobre trabalho &rarr;
+          </a>
+        </div>
+
+        <!-- 6. Família -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
+            <h3 class="service-title">Família & Sucessões</h3>
+            <p class="service-desc">
+              Apoio responsável em inventários, divórcios, partilha de bens, pensão para os filhos e guarda, sempre com calma e equilíbrio.
+            </p>
+          </div>
+          <a href="https://wa.me/5515998397506?text=Ol%C3%A1%2C%20gostaria%20de%20orienta%C3%A7%C3%A3o%20em%20Direito%20de%20Fam%C3%ADlia." target="_blank" class="service-link">
+            Saber mais sobre família &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SESSÃO EDITORIAL: SOBRE A DRA. ANA BRASIL -->
+  <section class="about-editorial-section" id="sobre-ana">
+    <div class="about-watermark"></div>
+    <div class="container about-grid">
+      <div class="about-portrait-placeholder">
+        <img src="assets/ana_brasil.png" alt="Dra. Ana Júlia Brasil">
+        <div class="about-badge-tag">Ana Brasil Advocacia</div>
+      </div>
+
+      <div class="about-text">
+        <span class="section-tag">Trajetória & Compromisso</span>
+        <h2>Uma Advocacia com Escuta, Verdade e Respeito</h2>
+        <p>
+          A <strong>Dra. Ana Júlia Brasil</strong> escolheu a advocacia para aproximar o Direito das pessoas comuns. Com escritório físico no centro de Itapetininga/SP, dedica seu trabalho diário a atender trabalhadores, idosos e famílias que precisam de ajuda honesta e segura.
+        </p>
+        <p>
+          Com pós-graduação na <strong>Universidade de Coimbra (Portugal)</strong> e especialização em Previdência, une a experiência técnica a um atendimento acolhedor:
+        </p>
+        <p>
+          <em>"Acredito que o papel do advogado é sentar com calma, ouvir de verdade e explicar as coisas de um jeito simples. Seja para um caso grande ou para tirar uma dúvida rápida, cada pessoa merece ser tratada com muito respeito."</em>
+        </p>
+        <div style="margin-top: 20px;">
+          <a href="https://wa.me/5515998397506?text=Ol%C3%A1%2C%20Dra.%20Ana.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20meu%20caso." target="_blank" class="btn-primary">
+            Conversar com a Dra. Ana Brasil
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NARRATIVA HUMANIZADA (COIMBRA & ÉTICA) -->
+  <section class="dark-section" id="sobre">
+    <div class="dark-watermark"></div>
+    <div class="container authority-grid">
+      <div class="authority-content">
+        <span class="section-tag">Nossa Forma de Trabalhar</span>
+        <h2>O Direito é sobre Pessoas, Histórias e Respeito</h2>
+        <p>
+          No escritório <strong>Ana Brasil Advocacia</strong>, acreditamos que atender um cliente vai muito além de papéis e processos. Para nós, advogar é sentar ao seu lado, ouvir sua história com calma e falar a verdade com sinceridade.
+        </p>
+        <p>
+          Nossos estudos na <strong>Universidade de Coimbra</strong> reforçaram essa certeza: o Direito só serve de verdade quando protege a dignidade de quem trabalhou a vida inteira.
+        </p>
+
+        <div class="human-quote">
+          "Direito humano é isso: sentar, conversar, ouvir e respeitar a história de cada pessoa com dignidade e verdade."
+        </div>
+      </div>
+
+      <div class="action-card">
+        <h3>Tire Suas Dúvidas</h3>
+        <p>
+          Se você tem dúvidas sobre o seu tempo de serviço, laudos médicos ou se o INSS negou seu pedido, podemos analisar seus documentos com cuidado.
+        </p>
+        <a href="https://wa.me/5515998397506?text=Ol%C3%A1%2C%20Dra.%20Ana.%20Gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20sobre%20meu%20caso." target="_blank" class="btn-primary" style="background-color: var(--color-gold); border-color: var(--color-gold); color: var(--color-dark); width: 100%;">
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO ATENDEMOS (DIRETRIZES) -->
+  <section class="pillars-section" id="diretrizes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clareza & Cuidado</span>
+        <h2 class="section-heading">Como Cuidamos do Seu Caso</h2>
+        <p class="section-subtitle">
+          Um atendimento simples e transparente para você ter tranquilidade do início ao fim.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-item">
+          <div class="pillar-num">01</div>
+          <h3 class="pillar-title">Escuta e Análise Cuidadosa</h3>
+          <p class="pillar-desc">
+            Lemos suas carteiras de trabalho, extratos e laudos com calma para dizer com total sinceridade quais são os seus direitos.
+          </p>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-num">02</div>
+          <h3 class="pillar-title">Explicação Fácil de Entender</h3>
+          <p class="pillar-desc">
+            Conversamos de forma simples e direta, sem palavras difíceis, para que você entenda exatamente cada passo do seu caso.
+          </p>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-num">03</div>
+          <h3 class="pillar-title">Acompanhamento Transparente</h3>
+          <p class="pillar-desc">
+            Você fica sempre informado sobre o andamento do seu pedido, com contato direto e fácil com o nosso escritório.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO & CONTATO -->
+  <section class="contact-section" id="contato">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Canais de Atendimento</span>
+        <h2 class="section-heading">Localização & Contato</h2>
+        <p class="section-subtitle">
+          Atendimento presencial no centro de Itapetininga/SP ou suporte por WhatsApp.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div>
+              <div class="contact-label">Endereço do Escritório</div>
+              <div class="contact-val">Rua Dr. Julio Prestes, nº 481D, Centro<br>Itapetininga / SP — CEP 18200-100</div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div>
+              <div class="contact-label">WhatsApp de Atendimento</div>
+              <div class="contact-val"><a href="https://wa.me/5515998397506" target="_blank">(15) 99839-7506</a></div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <div>
+              <div class="contact-label">Instagram Informativo</div>
+              <div class="contact-val"><a href="https://www.instagram.com/adv.anabrasil/" target="_blank">@adv.anabrasil</a></div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <div>
+              <div class="contact-label">Horário de Atendimento</div>
+              <div class="contact-val">Segunda a Sexta-feira, das 09h às 18h</div>
+            </div>
+          </div>
+
+          <div class="oab-disclaimer">
+            <strong>Nota de Conformidade Ética (OAB):</strong>
+            Este site tem finalidade exclusivamente informativa e institucional, em estrita observância ao Código de Ética e Disciplina da OAB e ao Provimento nº 205/2021 do CFOAB.
+          </div>
+        </div>
+
+        <div class="map-frame">
+          <iframe 
+            src="https://maps.google.com/maps?q=Rua%20Dr.%20Julio%20Prestes%2C%20n%C2%BA%20481D%2C%20Centro%2C%20Itapetininga%2FSP&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION INTERATIVO (NO FINAL DO SITE) -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tire Suas Dúvidas</span>
+        <h2 class="section-heading">Perguntas Frequentes</h2>
+        <p class="section-subtitle">
+          Clique nas perguntas abaixo para ler respostas simples sobre seus direitos e atendimento.
+        </p>
+      </div>
+
+      <div class="faq-wrapper">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFAQ(this)">
+            <span class="faq-question">Como saber se tenho direito a uma aposentadoria ou benefício?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-body">
+            <p>
+              O primeiro passo é fazer uma análise dos seus documentos (carteira de trabalho, extrato do INSS e laudos médicos). No escritório, a gente olha tudo com calma e explica de forma sincera se você já tem direito ou o que falta para conseguir.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFAQ(this)">
+            <span class="faq-question">Trabalhei na roça quando era jovem. Esse tempo conta para aposentar?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-body">
+            <p>
+              Sim! O tempo trabalhado na roça e na agricultura com a família, mesmo quando era jovem, pode ser somado no INSS com documentos da época (certidões, notas e registros), ajudando a adiantar ou aumentar o valor da sua aposentadoria.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFAQ(this)">
+            <span class="faq-question">O INSS cortou ou negou o meu auxílio-doença. O que posso fazer?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-body">
+            <p>
+              A negativa do INSS não é a palavra final. É possível juntar novos laudos, receitas e exames atualizados para pedir uma nova avaliação ou entrar com um pedido na Justiça com um médico perito neutro.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFAQ(this)">
+            <span class="faq-question">Sofri um acidente e fiquei com sequela, mas continuo trabalhando. Tenho direito?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-body">
+            <p>
+              Sim. Se você sofreu qualquer acidente e ficou com alguma limitação permanente para o trabalho, pode ter direito ao <strong>Auxílio-Acidente</strong>. É um valor mensal que o INSS paga junto com o seu salário normal.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFAQ(this)">
+            <span class="faq-question">O que é o planejamento da aposentadoria e por que ele ajuda?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-body">
+            <p>
+              É uma conta feita com antecedência para saber exatamente qual a melhor idade e regra para pedir a sua aposentadoria. Isso evita que você peça o benefício cedo demais e acabe perdendo dinheiro todo mês.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFAQ(this)">
+            <span class="faq-question">Não moro em Itapetininga ou não posso ir ao escritório. Posso ser atendido?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-body">
+            <p>
+              Com certeza! Além do atendimento no nosso escritório no centro de Itapetininga, atendemos também pelo WhatsApp e videochamada, com a mesma atenção e segurança para quem mora em outras cidades.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFAQ(this)">
+            <span class="faq-question">Como faço para mandar meus documentos e tirar dúvidas?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-body">
+            <p>
+              Basta clicar nos botões do site e mandar uma mensagem no nosso WhatsApp <a href="https://wa.me/5515998397506" target="_blank" style="color: var(--color-gold); font-weight: 600;">(15) 99839-7506</a>. Nossa equipe vai te orientar com carinho sobre quais papéis separar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LGPD BANNER -->
+  <div id="lgpd-banner" class="lgpd-banner">
+    <div class="lgpd-text">
+      <strong>Privacidade & LGPD:</strong> Utilizamos cookies para garantir o funcionamento seguro do site e melhorar a sua navegação, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).
+    </div>
+    <button class="btn-lgpd-accept" onclick="acceptLGPD()">Prosseguir</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="assets/SEM fundo 4.png" alt="Ana Brasil Advocacia">
+        </div>
+
+        <div>
+          <a href="https://wa.me/5515998397506" target="_blank" style="color: #D1D5DB; text-decoration: none; font-size: 12.5px;">Atendimento Informativo via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 Ana Brasil Advocacia. Todos os direitos reservados. Conteúdo estritamente informativo em observância ao Provimento nº 205/2021 da OAB e à LGPD.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Accordion Toggle
+    function toggleFAQ(headerElement) {
+      const item = headerElement.parentElement;
+      const isActive = item.classList.contains('active');
+      
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('active');
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
+
+    // LGPD Consent
+    function checkLGPD() {
+      if (localStorage.getItem('lgpd_consent_anabrasil') === 'true') {
+        document.getElementById('lgpd-banner').classList.add('hidden');
+      }
+    }
+    function acceptLGPD() {
+      localStorage.setItem('lgpd_consent_anabrasil', 'true');
+      document.getElementById('lgpd-banner').classList.add('hidden');
+    }
+    document.addEventListener('DOMContentLoaded', checkLGPD);
+  </script>
+
+</body>
+</html>
