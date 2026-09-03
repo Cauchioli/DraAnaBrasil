@@ -803,6 +803,11 @@
 
     /* Mobile Responsiveness (Perfeita em Smartphones) */
     @media (max-width: 900px) {
+      .brand-logo img { height: 32px; max-width: 170px; }
+      .footer-logo img { height: 28px; max-width: 150px; }
+      .nav-wrapper { padding: 10px 0; }
+      .btn-header { padding: 8px 14px; font-size: 11px; }
+      .hero-watermark, .about-watermark, .dark-watermark { width: 280px; height: 280px; opacity: 0.03; }
       .hero-grid, .about-grid, .authority-grid, .contact-grid { grid-template-columns: 1fr; gap: 28px; }
       .hero-portrait-frame img, .about-portrait-placeholder img { height: 340px; }
       .services-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -818,14 +823,19 @@
     }
 
     @media (max-width: 580px) {
+      .brand-logo img { height: 27px; max-width: 140px; }
+      .footer-logo img { height: 24px; max-width: 130px; }
+      .nav-wrapper { padding: 8px 0; }
+      .btn-header { padding: 7px 11px; font-size: 10.5px; }
+      .hero-watermark, .about-watermark, .dark-watermark { width: 200px; height: 200px; opacity: 0.025; }
       .services-grid { grid-template-columns: 1fr; }
       .highlights-grid { grid-template-columns: 1fr; gap: 14px 0; }
       .highlight-item { border-right: none; border-bottom: 1px solid var(--color-border-light); padding-bottom: 12px; }
       .highlight-item:last-child { border-bottom: none; padding-bottom: 0; }
       .hero-actions { flex-direction: column; width: 100%; }
       .btn-primary, .btn-secondary { width: 100%; text-align: center; }
-      .hero-title { font-size: 27px; }
-      .hero-portrait-frame img, .about-portrait-placeholder img { height: 290px; }
+      .hero-title { font-size: 26px; }
+      .hero-portrait-frame img, .about-portrait-placeholder img { height: 310px; }
       .top-bar-inner { flex-direction: column; text-align: center; }
     }
   </style>
