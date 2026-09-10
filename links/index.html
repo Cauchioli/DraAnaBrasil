@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Ana Júlia Brasil · Links Oficiais</title>
+  <meta name="description" content="Canais de atendimento, site oficial e orientações jurídicas com a Dra. Ana Júlia Brasil. Advocacia Previdenciária e Atendimento Humanizado em Itapetininga/SP.">
+  
+  <!-- Open Graph / WhatsApp -->
+  <meta property="og:title" content="Dra. Ana Júlia Brasil · Advocacia Previdenciária">
+  <meta property="og:description" content="Atendimento humanizado em aposentadorias, benefícios do INSS e orientações jurídicas.">
+  <meta property="og:image" content="../assets/IMG_9069_Edit.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-dark: #111827;
+      --color-dark-surface: #1E293B;
+      --color-gold: #B89344;
+      --color-gold-hover: #D4AF5F;
+      --color-gold-subtle: #F5EFE0;
+      --color-sand: #F9F8F6;
+      --color-white: #FFFFFF;
+      --color-text: #1F2937;
+      --color-text-muted: #6B7280;
+      --color-border: #E5E2DA;
+      --font-title: 'Lora', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--color-sand);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 38px 16px 24px 16px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .bg-watermark {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 440px;
+      height: 440px;
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 0;
+      background-image: url('../assets/SEM fundo 7.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .links-wrapper {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Perfil */
+    .profile-card {
+      text-align: center;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .avatar-box {
+      width: 106px;
+      height: 106px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--color-gold) 0%, rgba(184, 147, 68, 0.25) 100%);
+      box-shadow: 0 8px 24px rgba(184, 147, 68, 0.2);
+      margin-bottom: 12px;
+    }
+
+    .avatar-box img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border: 2px solid var(--color-white);
+    }
+
+    .profile-name {
+      font-family: var(--font-title);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 3px;
+    }
+
+    .profile-tagline {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    .profile-bio {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      line-height: 1.45;
+      max-width: 360px;
+      margin-bottom: 12px;
+    }
+
+    .badges-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .badge-pill {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--color-dark);
+    }
+
+    /* Lista de Links */
+    .links-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .link-card {
+      width: 100%;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: var(--color-dark);
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .link-card:hover, .link-card:active {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      border-color: var(--color-gold);
+    }
+
+    /* WhatsApp Destaque */
+    .link-card.featured-wa {
+      background: var(--color-dark);
+      color: var(--color-white);
+      border-color: var(--color-dark);
+      box-shadow: 0 6px 18px rgba(17, 24, 39, 0.15);
+    }
+    .link-card.featured-wa:hover {
+      background: #1a2233;
+      border-color: var(--color-gold);
+    }
+    .link-card.featured-wa .link-icon {
+      color: #25D366;
+    }
+    .link-card.featured-wa .link-title {
+      color: var(--color-white);
+    }
+    .link-card.featured-wa .link-sub {
+      color: #9CA3AF;
+    }
+    .link-card.featured-wa .link-arrow {
+      color: var(--color-gold);
+    }
+
+    /* Site Oficial Destaque */
+    .link-card.featured-site {
+      background: linear-gradient(135deg, #FFFFFF 0%, var(--color-gold-subtle) 100%);
+      border-color: rgba(184, 147, 68, 0.45);
+    }
+    .link-card.featured-site .link-icon {
+      color: var(--color-gold);
+    }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .link-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-gold);
+    }
+    .link-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .link-content {
+      text-align: left;
+    }
+
+    .link-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-dark);
+      line-height: 1.25;
+      display: block;
+    }
+
+    .link-sub {
+      font-size: 11.5px;
+      color: var(--color-text-muted);
+      line-height: 1.3;
+      margin-top: 2px;
+      display: block;
+    }
+
+    .link-arrow {
+      color: #9CA3AF;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .link-card:hover .link-arrow {
+      transform: translateX(3px);
+      color: var(--color-gold);
+    }
+
+    /* Redes */
+    .social-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-dark);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .social-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    .social-btn:hover {
+      color: var(--color-gold);
+      border-color: var(--color-gold);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-brand {
+      font-family: var(--font-title);
+      font-weight: 700;
+      color: var(--color-dark);
+      font-size: 12px;
+    }
+
+    .footer-oab {
+      font-size: 9px;
+      color: #9CA3AF;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-watermark"></div>
+
+  <main class="links-wrapper">
+    <div class="profile-card">
+      <div class="avatar-box">
+        <img src="../assets/IMG_9069_Edit.jpg" alt="Dra. Ana Júlia Brasil">
+      </div>
+      <h1 class="profile-name">Dra. Ana Júlia Brasil</h1>
+      <div class="profile-tagline">Advocacia Previdenciária</div>
+      <p class="profile-bio">
+        Atendimento humanizado e escuta com atenção para cuidar dos seus direitos e da sua aposentadoria.
+      </p>
+      <div class="badges-row">
+        <span class="badge-pill">OAB/SP</span>
+        <span class="badge-pill">Pós em Coimbra</span>
+        <span class="badge-pill">Itapetininga / SP</span>
+      </div>
+    </div>
+
+    <div class="links-list">
+      <!-- 1. WhatsApp (Destaque Principal) -->
+      <a href="https://wa.me/5515998397506?text=Ol%C3%A1%2C%20Dra.%20Ana.%20Gostaria%20de%20esclarecer%20d%C3%BAvidas%20sobre%20benef%C3%ADcios%20do%20INSS." target="_blank" class="link-card featured-wa">
+        <div class="link-left">
+          <div class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.156 8.156 0 0 1-1.25-4.29c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.85 5.8 2.4 1.55 1.55 2.41 3.61 2.41 5.8 0 4.52-3.68 8.15-8.17 8.15zm4.49-6.11c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/></svg>
+          </div>
+          <div class="link-content">
+            <span class="link-title">Conversar no WhatsApp</span>
+            <span class="link-sub">Atendimento direto: (15) 99839-7506</span>
+          </div>
+        </div>
+        <div class="link-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+      </a>
+
+      <!-- 2. Site Oficial (Redirecionamento para a Landing Page) -->
+      <a href="../" class="link-card featured-site">
+        <div class="link-left">
+          <div class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <div class="link-content">
+            <span class="link-title">Acessar Nosso Site Oficial</span>
+            <span class="link-sub">Conheça nossa estrutura e atuação</span>
+          </div>
+        </div>
+        <div class="link-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+      </a>
+
+      <!-- 3. Localização / Escritório -->
+      <a href="https://maps.google.com/?q=Rua+Dr.+Julio+Prestes,+481D,+Centro,+Itapetininga+-+SP" target="_blank" class="link-card">
+        <div class="link-left">
+          <div class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="link-content">
+            <span class="link-title">Endereço do Escritório</span>
+            <span class="link-sub">Rua Dr. Julio Prestes, 481D · Itapetininga</span>
+          </div>
+        </div>
+        <div class="link-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+      </a>
+
+      <!-- 4. Instagram -->
+      <a href="https://instagram.com/adv.anabrasil" target="_blank" class="link-card">
+        <div class="link-left">
+          <div class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </div>
+          <div class="link-content">
+            <span class="link-title">Instagram (@adv.anabrasil)</span>
+            <span class="link-sub">Orientações e bastidores jurídicos</span>
+          </div>
+        </div>
+        <div class="link-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+      </a>
+
+      <!-- 5. TikTok -->
+      <a href="https://tiktok.com/@anabrasil_adv" target="_blank" class="link-card">
+        <div class="link-left">
+          <div class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.35 0 .68.06 1 .17V9.3a6.34 6.34 0 0 0-1-.08 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.58a8.28 8.28 0 0 0 4.77 1.52v-3.41z"/></svg>
+          </div>
+          <div class="link-content">
+            <span class="link-title">TikTok (@anabrasil_adv)</span>
+            <span class="link-sub">Vídeos informativos e dicas rápidas</span>
+          </div>
+        </div>
+        <div class="link-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+      </a>
+    </div>
+
+    <div class="social-row">
+      <a href="https://wa.me/5515998397506" target="_blank" class="social-btn" title="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.156 8.156 0 0 1-1.25-4.29c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.85 5.8 2.4 1.55 1.55 2.41 3.61 2.41 5.8 0 4.52-3.68 8.15-8.17 8.15z"/></svg>
+      </a>
+      <a href="https://instagram.com/adv.anabrasil" target="_blank" class="social-btn" title="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://tiktok.com/@anabrasil_adv" target="_blank" class="social-btn" title="TikTok">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.35 0 .68.06 1 .17V9.3a6.34 6.34 0 0 0-1-.08 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.58a8.28 8.28 0 0 0 4.77 1.52v-3.41z"/></svg>
+      </a>
+    </div>
+
+    <footer>
+      <div class="footer-brand">Ana Brasil Advocacia</div>
+      <div class="footer-oab">Informativo em conformidade com o Provimento CFOAB nº 205/2021</div>
+    </footer>
+  </main>
+
+</body>
+</html>
