@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calibração de Alinhamento e Centralização · Foto de Perfil Dra. Ana Brasil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-dark: #111827;
+      --color-gold: #B89344;
+      --color-gold-light: #D4AF5F;
+      --color-sand: #F9F8F6;
+      --color-white: #FFFFFF;
+      --color-border: #E5E2DA;
+      --color-text: #1F2937;
+      --color-text-muted: #6B7280;
+      --font-title: 'Lora', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #ECEAE4;
+      color: var(--color-text);
+      font-family: var(--font-body);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+    }
+
+    .header {
+      background: var(--color-dark);
+      color: var(--color-white);
+      border-radius: 16px;
+      padding: 26px 32px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(184, 147, 68, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .header h1 {
+      font-family: var(--font-title);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 4px;
+    }
+
+    .header p {
+      font-size: 13px;
+      color: var(--color-gold-light);
+    }
+
+    .badge-status {
+      background: rgba(184, 147, 68, 0.15);
+      color: var(--color-gold-light);
+      border: 1px solid var(--color-gold);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      text-align: center;
+    }
+
+    .card.highlight {
+      border: 2px solid var(--color-gold);
+      box-shadow: 0 8px 24px rgba(184, 147, 68, 0.18);
+    }
+
+    .tag-card {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+
+    .tag-card.before {
+      background: #FEE2E2;
+      color: #991B1B;
+    }
+
+    .tag-card.after {
+      background: rgba(184, 147, 68, 0.15);
+      color: var(--color-gold);
+    }
+
+    .avatar-wrapper {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, var(--color-gold) 0%, rgba(184, 147, 68, 0.25) 100%);
+      box-shadow: 0 10px 25px rgba(184, 147, 68, 0.25);
+      margin-bottom: 18px;
+    }
+
+    .avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 3px solid var(--color-white);
+    }
+
+    .card-title {
+      font-family: var(--font-title);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 12.5px;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .metrics-list {
+      list-style: none;
+      width: 100%;
+      font-size: 11.5px;
+      text-align: left;
+      border-top: 1px solid var(--color-border);
+      padding-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .metrics-list li {
+      display: flex;
+      justify-content: space-between;
+      color: #4B5563;
+    }
+
+    .metrics-list li strong {
+      color: var(--color-dark);
+    }
+
+    .actions-bar {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn-link {
+      background: var(--color-dark);
+      color: var(--color-white);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-link:hover {
+      background: #1F2937;
+      color: var(--color-gold-light);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>Calibração Visual · Foto de Perfil Dra. Ana Brasil</h1>
+        <p>Correção de inclinação angular e centralização geométrica milimétrica dos eixos faciais</p>
+      </div>
+      <div class="badge-status">100% Calibrado</div>
+    </div>
+
+    <div class="comparison-grid">
+      <!-- Antes -->
+      <div class="card">
+        <span class="tag-card before">Versão Anterior (Desalinhada)</span>
+        <div class="avatar-wrapper" style="box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+          <img src="assets/preview_circle_v1.png" alt="Antes">
+        </div>
+        <h3 class="card-title">Corte sem Compensação</h3>
+        <p class="card-desc">Cabeça ligeiramente inclinada para o lado, olhar desalinhado e assimetria perceptível.</p>
+        <ul class="metrics-list">
+          <li><span>Inclinação ocular:</span> <strong>-2.89° (torta)</strong></li>
+          <li><span>Deslocamento lateral:</span> <strong>54.5px à direita</strong></li>
+          <li><span>Encaixe no círculo:</span> <strong>Assimétrico</strong></li>
+        </ul>
+      </div>
+
+      <!-- Depois (Recomendado e Aplicado) -->
+      <div class="card highlight">
+        <span class="tag-card after">Versão Atual Calibrada (Oficial)</span>
+        <div class="avatar-wrapper">
+          <img src="assets/avatar_centered_v2_rotated.png" alt="Depois Calibrado">
+        </div>
+        <h3 class="card-title">Alinhamento Perfeito</h3>
+        <p class="card-desc">Olhos 100% nivelados na horizontal, nariz e queixo no eixo central exato, cabelo proporcionalmente distribuído.</p>
+        <ul class="metrics-list">
+          <li><span>Inclinação ocular:</span> <strong>0.00° (100% reta)</strong></li>
+          <li><span>Eixo vertical central:</span> <strong>x = 400px (exato)</strong></li>
+          <li><span>Encaixe no círculo:</span> <strong>Harmônico e natural</strong></li>
+        </ul>
+      </div>
+
+      <!-- Com Guia de Eixos -->
+      <div class="card">
+        <span class="tag-card after">Verificação com Eixos</span>
+        <div class="avatar-wrapper" style="box-shadow: 0 8px 20px rgba(0,0,0,0.06);">
+          <img src="assets/preview_circle_v2.png" alt="Com Eixos">
+        </div>
+        <h3 class="card-title">Mira Milimétrica</h3>
+        <p class="card-desc">Linhas douradas comprovam que a linha dos olhos e o centro do rosto passam precisamente pelo centro do círculo.</p>
+        <ul class="metrics-list">
+          <li><span>Eixo horizontal:</span> <strong>Base dos olhos</strong></li>
+          <li><span>Eixo vertical:</span> <strong>Testa, nariz e queixo</strong></li>
+          <li><span>Validação:</span> <strong>Zero desvio</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="actions-bar">
+      <div>
+        <strong style="font-size: 14px; color: var(--color-dark); display: block;">A nova imagem já está ativa em todos os arquivos:</strong>
+        <span style="font-size: 12px; color: var(--color-text-muted);">links/index.html, links.html, assets e repositório oficial.</span>
+      </div>
+      <a href="links/index.html" class="btn-link" target="_blank">
+        Visualizar Linktree Oficial &rarr;
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
